@@ -11,14 +11,16 @@ function showTime(){
                     h = h-12;
                     session = "PM";
                 }
-
+                
                 h = (h<10) ? "0" +h : h;
                 m = (m<10) ? "0" +m : m;
                 s = (s<10) ? "0" +s : s;
                 
-                var time = h + " : " + m + " : "+ s +" "+ session;
+                var time = h + ": " + m + ": "+ s +" ";
                 document.getElementById("TimeDisplay").innerText = time;
                 document.getElementById("TimeDisplay").textContent = time;
+                document.getElementById("SessionPeriod").innerText = session;
+                document.getElementById("SessionPeriod").textContent = session;
                 setTimeout(showTime, 1000);
 
                 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
